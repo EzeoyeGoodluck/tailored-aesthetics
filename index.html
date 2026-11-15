@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tailored Aesthetics — Home</title>
+<meta name="description" content="Tailored Aesthetics offers expert lip filler and aesthetic treatments designed to enhance your natural beauty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&family=Pinyon+Script&display=swap">
+<style>
+:root{
+  --blush:#D3B3B2; --blush-soft:#F3E7E4; --ivory:#FBF6F4;
+  --ink:#3A2628; --ink-deep:#2B1A1C; --gold:#C9A15A; --gold-text:#7A5A2A;
+  --serif:'Cormorant Garamond',Georgia,serif; --script:'Pinyon Script',cursive; --sans:'Montserrat',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--ivory);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--ink)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+section{padding:112px 0}
+.script{font-family:var(--script);line-height:1;color:#4A2E31;margin:0}
+.eyebrow{margin:0;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink-deep);margin:0}
+h2{font-size:clamp(36px,4.4vw,60px);line-height:1.05}
+p{margin:0}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:16px 30px;border-radius:999px;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:var(--ivory)}
+.btn-dark:hover{background:var(--ink-deep);color:var(--ivory)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink-deep)}
+.btn-line:hover{background:var(--ink);color:var(--ivory)}
+.btn-gold{background:var(--gold);color:var(--ink-deep)}
+.btn-gold:hover{background:#D7B370;color:var(--ink-deep)}
+.btn-light{border:1.5px solid var(--ivory);color:var(--ivory)}
+.btn-light:hover{background:var(--ivory);color:var(--ink-deep)}
+svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* header */
+header{background:var(--blush);position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(58,38,40,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:6px;padding-bottom:6px}
+.brand img{width:84px;height:84px;object-fit:cover}
+.links{display:flex;align-items:center;gap:32px;font-size:14px;font-weight:500;letter-spacing:.04em}
+.links a:not(.btn){text-decoration:none;position:relative;padding:8px 0}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:2px;height:1.5px;width:0;background:var(--ink);transition:width .25s}
+.links a:not(.btn):hover::after{width:100%}
+.links .btn{padding:12px 22px;font-size:12px}
+.menu-btn{display:none;background:none;border:0;color:var(--ink);width:48px;height:48px;align-items:center;justify-content:center;cursor:pointer}
+.menu-btn svg{width:26px;height:26px}
+
+/* hero */
+.hero{background:var(--blush);padding:72px 0 112px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:28px}
+.hero-copy .script{font-size:40px}
+.hero h1{font-size:clamp(46px,6vw,84px);line-height:1.02;letter-spacing:-.01em}
+.hero h1 em{font-style:italic}
+.hero-copy .lead{font-size:18px;line-height:1.7;max-width:520px}
+.ctas{display:flex;flex-wrap:wrap;gap:16px;padding-top:8px}
+.arch{position:relative;max-width:500px;width:100%;justify-self:center}
+.arch::before{content:"";position:absolute;inset:-18px -18px 18px 18px;border:1.5px solid var(--gold);border-radius:260px 260px 24px 24px}
+.arch img{position:relative;width:100%;height:560px;object-fit:cover;object-position:62% center;border-radius:250px 250px 20px 20px}
+
+/* signature */
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.split .head{display:flex;flex-direction:column;gap:20px}
+.rule{width:72px;height:2px;background:var(--gold)}
+.split .body{display:flex;flex-direction:column;gap:24px}
+.split .body>p{font-size:17px;line-height:1.8}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.mini{background:var(--blush-soft);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.mini b{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--ink-deep)}
+.mini span{font-size:14px;line-height:1.6}
+.arrow-link{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.arrow-link:hover svg{transform:translateX(4px)}
+.arrow-link svg{transition:transform .2s}
+
+/* treatments */
+.treatments{background:var(--blush-soft)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:56px}
+.sec-head .t{display:flex;flex-direction:column;gap:12px}
+.sec-head .script{font-size:36px}
+.sec-head>p{max-width:420px;font-size:16px;line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.card{background:var(--ivory);border-radius:20px;padding:36px 28px;display:flex;flex-direction:column;gap:16px;border:1px solid rgba(58,38,40,.08);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px -20px rgba(58,38,40,.35)}
+.badge{width:52px;height:52px;border-radius:50%;background:var(--blush);display:flex;align-items:center;justify-content:center}
+.badge svg{width:26px;height:26px;stroke-width:1.6}
+.card h3{font-size:28px;font-weight:600}
+.card p{font-size:15px;line-height:1.7;flex:1}
+.card .price{flex:none;font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--gold-text)}
+
+/* why */
+.center-head{text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center;margin-bottom:56px}
+.center-head .script{font-size:36px}
+.center-head h2{max-width:760px}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+.three>div{display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
+.num{font-family:var(--serif);font-size:56px;line-height:1;color:var(--gold-text)}
+.three h3{font-family:var(--sans);font-size:18px;font-weight:600}
+.three p{font-size:15px;line-height:1.7;max-width:320px}
+
+/* process */
+.process{background:var(--blush)}
+.process h2{margin-bottom:56px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.steps li{display:flex;flex-direction:column;gap:12px;padding-top:24px;border-top:1.5px solid var(--ink)}
+.steps small{font-size:12px;font-weight:600;letter-spacing:.2em}
+.steps h3{font-size:28px;font-weight:600}
+.steps p{font-size:15px;line-height:1.7}
+
+/* cta */
+.cta{background:var(--ink);color:var(--ivory)}
+.cta .wrap{max-width:960px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px}
+.cta .script{font-size:44px;color:var(--gold)}
+.cta h2{color:var(--ivory);font-size:clamp(38px,5vw,68px)}
+.cta p{font-size:17px;line-height:1.7;max-width:560px;color:#EADBD7}
+.cta .ctas{justify-content:center}
+
+/* footer */
+footer{background:var(--ink-deep);color:#EADBD7;padding:64px 0 40px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px}
+.foot .about{flex:1 1 280px;display:flex;flex-direction:column;gap:10px}
+.foot .about .script{font-size:44px;line-height:1.1;color:var(--gold)}
+.foot .about p{font-size:14px;line-height:1.7;max-width:320px}
+.foot .col{flex:0 1 240px;display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.6}
+.foot .col .label{font-size:12px;font-weight:600;letter-spacing:.2em;color:var(--gold)}
+.foot a{color:var(--ivory);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.foot a:hover{color:var(--gold)}
+.foot svg.i{width:16px;height:16px}
+.legal{border-top:1px solid rgba(234,219,215,.2);margin-top:48px;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:#CDB9B5}
+
+/* floating whatsapp */
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--ink);color:var(--ivory);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px -8px rgba(43,26,28,.6);transition:transform .2s}
+.float-wa:hover{transform:scale(1.07);color:var(--ivory)}
+.float-wa svg{width:26px;height:26px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:1024px){
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  section{padding:80px 0}
+  .wrap{padding:0 22px}
+  .hero{padding:40px 0 80px}
+  .hero-grid,.split{grid-template-columns:1fr;gap:48px}
+  .arch{max-width:420px}
+  .arch img{height:440px}
+  .three{grid-template-columns:1fr;gap:40px}
+  .menu-btn{display:inline-flex}
+  .links{position:absolute;left:0;right:0;top:100%;background:var(--blush);flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 22px;border-bottom:1px solid rgba(58,38,40,.12);display:none}
+  .links.open{display:flex}
+  .links a:not(.btn){padding:16px 0;border-bottom:1px solid rgba(58,38,40,.1)}
+  .links a:not(.btn)::after{display:none}
+  .links .btn{margin-top:16px;justify-content:center;padding:16px}
+  .brand img{width:70px;height:70px}
+}
+@media (max-width:560px){
+  .cards,.steps,.pair{grid-template-columns:1fr}
+  .hero-copy .script{font-size:32px}
+  .arch img{height:380px}
+  .ctas .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Tailored Aesthetics home"><img src="logo.jpg" alt="Tailored Aesthetics logo"></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="links" id="navLinks">
+      <a href="#treatments">Treatments</a>
+      <a href="#about">Why us</a>
+      <a href="#process">Your visit</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-dark" href="https://wa.me/2349066851598" target="_blank" rel="noopener">Book consultation</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <p class="script">Welcome to Tailored Aesthetics</p>
+        <h1>Beauty, enhanced.<br><em>Never overdone.</em></h1>
+        <p class="lead">Expert lip filler and aesthetic treatments, planned around your features and your goals — so you leave looking like yourself, only more defined.</p>
+        <div class="ctas">
+          <a class="btn btn-dark" href="https://wa.me/2349066851598" target="_blank" rel="noopener">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.6L3 21z"/></svg>Book on WhatsApp</a>
+          <a class="btn btn-line" href="#treatments">View treatments</a>
+        </div>
+      </div>
+      <div class="arch reveal">
+        <img src="lips.jpg" alt="Practitioner in gloves examining a client's lips before a filler treatment">
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE -->
+  <section>
+    <div class="wrap split">
+      <div class="head reveal">
+        <p class="eyebrow">Signature treatment</p>
+        <h2>Looking for fuller, more defined lips?</h2>
+        <div class="rule" aria-hidden="true"></div>
+      </div>
+      <div class="body reveal">
+        <p>Our lip filler treatments are designed to enhance your natural beauty — adding volume, balance and shape in proportion to your face. Every treatment starts with a consultation so the result is tailored to you.</p>
+        <div class="pair">
+          <div class="mini"><b>Volume</b><span>Soft, natural fullness that suits your face.</span></div>
+          <div class="mini"><b>Definition</b><span>A crisper lip border and a balanced shape.</span></div>
+        </div>
+        <a class="arrow-link" href="https://wa.me/2349066851598" target="_blank" rel="noopener">Ask about lip fillers
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREATMENTS -->
+  <section class="treatments" id="treatments">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="t">
+          <p class="script">Our menu</p>
+          <h2>Treatments</h2>
+        </div>
+        <p>Every plan is tailored after a one-to-one consultation. Prices are confirmed once we understand your goals.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12c2-3 4.5-5 7-5 1.3 0 2.2.8 3 1.6.8-.8 1.7-1.6 3-1.6 2.5 0 5 2 7 5-2 3.5-5.5 5-10 5S4 15.5 2 12z"/><path d="M2 12h20"/></svg></div>
+          <h3>Lip Fillers</h3>
+          <p>Fuller, more defined lips with a natural finish.</p>
+          <p class="price">FROM [YOUR PRICE]</p>
+        </article>
+        <article class="card reveal">
+          <div class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3c-1 4-4 6-4 11 0 3 1.5 6 2 7"/><path d="M15 3c1 4 4 6 4 11 0 3-1.5 6-2 7"/></svg></div>
+          <h3>Body Contouring</h3>
+          <p>Sculpt and shape your curves without surgery.</p>
+          <p class="price">FROM [YOUR PRICE]</p>
+        </article>
+        <article class="card reveal">
+          <div class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg></div>
+          <h3>Skin Rejuvenation</h3>
+          <p>Brighter, smoother, healthier-looking skin.</p>
+          <p class="price">FROM [YOUR PRICE]</p>
+        </article>
+        <article class="card reveal">
+          <div class="badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14c1 1.3 2.4 2 4 2s3-.7 4-2"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></div>
+          <h3>Anti-Wrinkle</h3>
+          <p>Soften fine lines for a refreshed, rested look.</p>
+          <p class="price">FROM [YOUR PRICE]</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="about">
+    <div class="wrap">
+      <div class="center-head reveal">
+        <p class="script">The Tailored difference</p>
+        <h2>Results designed around you — not a template</h2>
+      </div>
+      <div class="three">
+        <div class="reveal"><p class="num">01</p><h3>Tailored plans</h3><p>Each treatment is planned for your features, proportions and goals.</p></div>
+        <div class="reveal"><p class="num">02</p><h3>Natural-looking results</h3><p>We enhance what you already have — subtle, balanced and you.</p></div>
+        <div class="reveal"><p class="num">03</p><h3>Care at every step</h3><p>Clear advice before, during and after your treatment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="wrap">
+      <h2 class="reveal">Your visit, step by step</h2>
+      <ol class="steps">
+        <li class="reveal"><small>STEP 1</small><h3>Book</h3><p>Message or call us on WhatsApp to choose a time.</p></li>
+        <li class="reveal"><small>STEP 2</small><h3>Consult</h3><p>We talk through your goals and build your plan.</p></li>
+        <li class="reveal"><small>STEP 3</small><h3>Treat</h3><p>Your treatment, carried out with care and precision.</p></li>
+        <li class="reveal"><small>STEP 4</small><h3>Aftercare</h3><p>Simple aftercare guidance and a follow-up check-in.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="wrap reveal">
+      <p class="script">Ready when you are</p>
+      <h2>Book your consultation today</h2>
+      <p>Send us a message on WhatsApp or give us a call — we'll help you find the treatment that's right for you.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://wa.me/2349066851598" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.6L3 21z"/></svg>WhatsApp +234 906 685 1598</a>
+        <a class="btn btn-light" href="tel:+2347057379927">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call +234 705 737 9927</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="about">
+        <p class="script">Tailored Aesthetics</p>
+        <p>Expert aesthetic treatments designed to enhance your natural beauty.</p>
+      </div>
+      <div class="col">
+        <p class="label">CONTACT</p>
+        <a href="https://wa.me/2349066851598" target="_blank" rel="noopener">+234 906 685 1598 (WhatsApp)</a>
+        <a href="tel:+2347057379927">+234 705 737 9927</a>
+        <a href="https://instagram.com/_tailored.aesthetics" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>@_tailored.aesthetics</a>
+      </div>
+      <div class="col">
+        <p class="label">VISIT</p>
+        <p>[YOUR ADDRESS]<br>[CITY], Nigeria</p>
+        <p>[OPENING HOURS]</p>
+      </div>
+    </div>
+    <div class="legal">
+      <p>© 2026 Tailored Aesthetics. All rights reserved.</p>
+      <p>By appointment only</p>
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/2349066851598" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.6L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+</a>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'), links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){
+    var open=links.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+    links.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Open menu');
+  });});
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
